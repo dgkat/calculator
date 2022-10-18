@@ -18,7 +18,7 @@ private val DarkColorPalette = darkColors(
     onBackground = Color.Black,
     onSurface = Color.Black,
 
-)
+    )
 
 private val LightColorPalette = lightColors(
     primary = Purple500,
@@ -28,18 +28,16 @@ private val LightColorPalette = lightColors(
     surface = Color.White,
     onPrimary = Color.White,
     onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
+    onBackground = Color.DarkGray,
+    onSurface = Color.DarkGray
 
     )
 
 @Composable
 fun CalculatorTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
+    val colors =
         LightColorPalette
-    }
+
 
     MaterialTheme(
         colors = colors,
